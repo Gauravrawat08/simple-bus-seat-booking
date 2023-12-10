@@ -1,0 +1,49 @@
+>ways to connect to a MYSQL database
+1. MySQLI Extension
+2. PDO - directly use functions 
+
+1. MySQLI Extension > this project user Procedural programming 
+
+q - what is a session?
+// used to manage information across difference pages
+session start syntax -
+session_start();   //verify the user login info and always use this method in html top area
+print session value
+$_SESSION['variable']   > this is super global 
+
+
+logout 
+session_unset() - all varibale are set unset
+session_destroy() - curennt session destroy
+
+>start the session and get the data
+session_start();
+echo "welcome".$_SESSION['username'];
+
+>logout session
+
+session_start();
+if(isset($_SESSION['username'])){
+
+session_unset();  > all variable unset
+session_destroy; >curennt session distroy;
+echo "You have been logged out";
+}
+else{
+    echo "Please login to continue";
+}
+
+
+
+
+
+*********php function defination****************
+isset()  > set the session
+
+
+
+
+**************mysql document************
+
+create table query 
+CREATE TABLE `busproject`.`users` (`username` VARCHAR(20) NOT NULL , `mail` VARCHAR(50) NOT NULL , `psd` VARCHAR(8) NOT NULL );
